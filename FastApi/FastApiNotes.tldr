@@ -1,0 +1,23 @@
+Installation and Setup into your laptops
+=======================================================
+mkdir Fastapi
+cd Fastapi
+
+create Virtual Environment
+===============================
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install fastapi
+pip install uvicorn  [for web server ]
+
+
+Source Code
+================
+from fastapi import FastAPI
+
+app = FastAPI()
+@app.get("/")
+def home():
+    return {"name":"siddhu"}
+
+PS C:\Users\sreed\OneDrive\Desktop\FastApi> uvicorn demo1:app --reload
